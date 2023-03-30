@@ -2,6 +2,15 @@ import React, { useState } from 'react';
 import { sendMessage } from './ChatGPTAPI';
 import styles from './Chat.module2.css';
 
+// Get the token from session storage or prompt the user to enter it
+let userToken = sessionStorage.getItem("userToken");
+if (!userToken) {
+  userToken = prompt("Please enter your OpenAI token");
+  if (userToken) {
+    sessionStorage.setItem("userToken", userToken);
+  }
+}
+
 const App = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
@@ -13,7 +22,7 @@ const App = () => {
     setMessages([...messages, { type: 'user', text: input }]);
     setInput('');
 
-    const response = await sendMessage(input);
+    const response = await sendMessage(input, userToken);
     setMessages((prevMessages) => [...prevMessages, { type: 'gpt', text: response }]);
   };
 
