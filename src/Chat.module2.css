@@ -1,0 +1,77 @@
+.chatContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .chatWindow {
+    flex: 1;
+    width: 60%;
+    background-color: white;
+    overflow-y: scroll;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .messageContainer {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .userMessage,
+  .gptMessage {
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 70%;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+  }
+  
+  .userMessage {
+    background-color: #007bff;
+    color: rgb(0, 0, 0);
+    align-self: flex-end;
+  }
+  
+  .gptMessage {
+    background-color: #e1e1e1;
+    color: black;
+    align-self: flex-start;
+  }
+  
+  .inputForm {
+    display: flex;
+    width: 60%;
+  }
+  
+  input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
