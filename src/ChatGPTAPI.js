@@ -35,3 +35,25 @@ export const sendMessage = async (message, userToken) => {
   }
 };
 
+// WARNING : messages can be infinite lenght -> risk on tokens and credits for user
+export const sendMessageWithContext = async (messages, userToken) => {
+
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${userToken}`,
+  };
+
+  const data = {
+    model: 'gpt-3.5-turbo-0301',
+    messages: messages,
+    max_tokens: 100,
+    n: 1,
+    temperature: 0.8,
+  };
+  try {
+    const response = await axios.post(API_URL, data, { headers });
+    return response.data.choices[0].message.content.trim();
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
