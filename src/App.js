@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { sendMessage, sendMessageWithContext } from './ChatGPTAPI';
 import TokenInput from './TokenInput';
+import Founders from './Founders';
 import styles from './Chat.module2.css';
 
 const App = () => {
@@ -35,7 +36,7 @@ const App = () => {
 
   //if the person isn't logged in with it's userToken
   if (!userToken) {
-    return <TokenInput setUserToken={setUserToken} />;
+    return (<TokenInput setUserToken={setUserToken} />);
   }
 
   return (
