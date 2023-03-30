@@ -1,14 +1,15 @@
 import axios from 'axios';
 
-const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 const API_URL = 'https://api.openai.com/v1/chat/completions';
 
-const headers = {
-  'Content-Type': 'application/json',
-  'Authorization': `Bearer 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`,
-};
 
-export const sendMessage = async (message) => {
+export const sendMessage = async (message, userToken) => {
+
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${userToken}`,
+  };
+
   const data = {
     model: 'gpt-3.5-turbo-0301',
     messages: [
