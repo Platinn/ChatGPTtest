@@ -42,7 +42,7 @@ const App = () => {
 
   //if the person isn't logged in with it's userToken
   if (!userToken) {
-    return <TokenInput setUserToken={setUserToken} />;
+    return (<TokenInput setUserToken={setUserToken} />);
   }
 
   return (
