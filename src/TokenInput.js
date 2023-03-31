@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './TokenInputDesign.css';
 
 const TokenInput = ({ setUserToken }) => {
   const [input, setInput] = useState("");
@@ -10,14 +11,14 @@ const TokenInput = ({ setUserToken }) => {
   };
 
   return (
-    <div>
-      <h1>Welcome to Naiad Technologies!</h1>
+    <div className="container">
+      <h1>Welcome to Symma</h1>
 
-      <p>Discover a new interface for ChatGPT</p>
+      <h2 className='subtible'>Discover a new way to interact with GPT and other Large Language Models</h2>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="token-input">
         <h2>Login with OpenAI</h2>
-        <p>You need to use your own </p>
+        <div>You need to use your own OpenAI API token</div>
         <label htmlFor="token-input">Please enter your OpenAI API token:</label>
         <input
           id="token-input"
@@ -30,9 +31,9 @@ const TokenInput = ({ setUserToken }) => {
 
       <h3>Need help?</h3>
 
-      <div>
-        <p>If you have an OpenAI acount, then you have an OpenAI API token.</p>
-        <p>To access your OpenAI API token :</p>
+      <div className="help-section">
+        <div>If you have an OpenAI acount, then you have an OpenAI API token.</div>
+        <div>To access your OpenAI API token :</div>
         <ol>
           <li>Log in to your OpenAI account on the OpenAI website.</li>
           <li>
@@ -48,30 +49,32 @@ const TokenInput = ({ setUserToken }) => {
             "Create New API Token" button and following the prompts.
           </li>
         </ol>
+        <div>For privacy and security concerns, we do not store your API key.</div>
       </div>
 
       <h3>Who we are</h3>
 
-      <div>
-        <h4>Pierre-Louis Biojout</h4>
-        <p>email : plb@naiad-tech.com</p>
-        <a
-          href="https://www.linkedin.com/in/pierre-louis-biojout-9509741aa"
-          target="_blank"
-        >
-          LinkedIn
-        </a>
-        <p>LinkedIn : </p>
-      </div>
-      <div>
-        <h4>Paul-Louis Venard</h4>
-        <p>email : paul-louis@naiad-tech.com</p>
-        <a
-          href="https://www.linkedin.com/in/paul-louis-venard-9269b5116/"
-          target="_blank"
-        >
-          LinkedIn
-        </a>
+      <div className="contact-info">
+        <div className="contact">
+          <h4>Pierre-Louis Biojout</h4>
+          <div>plb@symma.tech</div>
+          <a
+            href="https://www.linkedin.com/in/pierre-louis-biojout-9509741aa"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </div>
+        <div className="contact">
+          <h4>Paul-Louis Venard</h4>
+          <div>paul-louis@symma.tech</div>
+          <a
+            href="https://www.linkedin.com/in/paul-louis-venard-9269b5116/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </div>
       </div>
     </div>
   );

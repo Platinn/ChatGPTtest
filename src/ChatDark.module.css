@@ -1,37 +1,37 @@
 .chatContainer {
-    /*background-color: #2c2c2c;*/
-    background-color: #222;
-  }
-  
-  .chatWindow {
-    /*background-color: #1c1c1c;*/
-    background-color: #444;
-    height: calc(100vh - 120px);
-    margin-bottom: 20px;
-  }
-  
-  .userMessage {
-    background-color: #007aff;
-  }
-  
-  .gptMessage {
-    background-color: #959494;
-    color : white
-  }
-  
-  .inputForm {
-    background-color: #222;
-  }
-  
-  .inputForm input {
-    background-color: #444;
-    color: #f0f0f0;
-  }
-  
-  button {
-    background-color: #2e89ff;
-  }
-  
-  button:hover {
-    background-color: #1862b3;
-  }
+  background-color: #222;
+  width: 100%;
+}
+
+.chatWindow {
+  background-color: #444;
+  height: calc(100vh - 170px);
+  margin-bottom: 20px;
+  margin-top: 70px;
+}
+
+.userMessage {
+  background-color: #007aff;
+}
+
+.gptMessage {
+  background-color: #959494;
+  color: white;
+}
+
+.inputForm {
+  background-color: #222;
+}
+
+.inputForm input {
+  background-color: #444; /* Change this to a contrasting color */
+  color: #f0f0f0;
+}
+
+button {
+  background-color: #2e89ff;
+}
+
+button:hover {
+  background-color: #1862b3;
+}
