@@ -18,8 +18,8 @@ const TokenInput = ({ setUserToken }) => {
 
       <form onSubmit={handleSubmit} className="token-input">
         <h2>Login with OpenAI</h2>
-        <div>You need to use your own OpenAI API token</div>
-        <label htmlFor="token-input">Please enter your OpenAI API token:</label>
+        <div>You need to use your own OpenAI API key</div>
+        <label htmlFor="token-input">Please enter your OpenAI API key:</label>
         <input
           id="token-input"
           type="text"
@@ -32,8 +32,8 @@ const TokenInput = ({ setUserToken }) => {
       <h3>Need help?</h3>
 
       <div className="help-section">
-        <div>If you have an OpenAI acount, then you have an OpenAI API token.</div>
-        <div>To access your OpenAI API token :</div>
+        <div>If you have an OpenAI acount, then you have an OpenAI API key.</div>
+        <div>To access your OpenAI API key :</div>
         <ol>
           <li>Log in to your OpenAI account on the OpenAI website.</li>
           <li>
@@ -49,6 +49,7 @@ const TokenInput = ({ setUserToken }) => {
             "Create New API Token" button and following the prompts.
           </li>
         </ol>
+        <div>It should looks like something like this "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"</div>
         <div>For privacy and security concerns, we do not store your API key.</div>
       </div>
 
