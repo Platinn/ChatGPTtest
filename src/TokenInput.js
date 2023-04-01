@@ -18,8 +18,8 @@ const TokenInput = ({ setUserToken }) => {
 
       <form onSubmit={handleSubmit} className="token-input">
         <h2>Login with OpenAI</h2>
-        <div>You need to use your own OpenAI API token</div>
-        <label htmlFor="token-input">Please enter your OpenAI API token:</label>
+        <div>You need to use your own OpenAI API key</div>
+        <label htmlFor="token-input">Please enter your OpenAI API key:</label>
         <input
           id="token-input"
           type="text"
