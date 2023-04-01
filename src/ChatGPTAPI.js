@@ -55,5 +55,6 @@ export const sendMessageWithContext = async (messages, userToken) => {
     return response.data.choices[0].message.content.trim();
   } catch (error) {
     console.error('Error:', error);
+    return "Your API key is invalid. Reload the page and set it properly.";
   }
 };
