@@ -83,6 +83,8 @@ body {
     .help-section {
         padding: 20px 0;
         color: black;
+        word-wrap: break-word;
+        width: 99%;
     }
       
     .contact-info {
