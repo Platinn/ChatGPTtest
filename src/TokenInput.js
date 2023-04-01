@@ -34,6 +34,7 @@ const TokenInput = ({ setUserToken }) => {
 
       <div className="help-section">
         <div>If you have an OpenAI acount, then you have an OpenAI API key.</div>
+        <div>You should find it <a href="https://platform.openai.com/account/api-keys" target="_blank">here</a></div>
         <div>To access your OpenAI API key :</div>
         <ol>
           <li>Log in to your OpenAI account on the OpenAI website.</li>
